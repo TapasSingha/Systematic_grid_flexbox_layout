@@ -38,12 +38,8 @@ a{
     border-radius:25px;
 }
 #search form{
-    display:grid;
-    grid-template-columns: 87% 10%;
-    column-gap: 3%;
-    min-width:97%;
-    grid-template-areas: 
-    "search-text search-icon";
+    display:flex;
+    align-items:center;
 }
 
 #search form *{
@@ -52,20 +48,21 @@ a{
 /*_________________________________________________
 Instruction: 
     Increase the gap between the search-text and the top and bottom celing of search form
+
+Status: Completed by assigning height and using flexbox.
 ___________________________________________________*/
 
 #search input[type="text"]{  
-    grid-area:search-text;  
     border-radius:25px;
-    
+    height:18px; 
+    width:182px;
+    margin-right:3px;
 }
 #search input[type="submit"]{
-    grid-area:search-icon;       
     background:url(images/search.png) no-repeat;
+    width:18px;
+    height:18px;
     cursor:pointer;
-    min-height:23px;
-    position:relative;
-    top:2px;
 }
 
 
