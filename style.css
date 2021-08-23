@@ -17,7 +17,7 @@ li{
     margin-right:2px; 
     position:relative;
 }
-li::after{
+#top-link li::after{
     /*Give it a width, height and content:"". Then make it position absolute in the context of its parent (li)being position:relative. Now it should render on screen. 
     */
     content:"";
@@ -88,7 +88,23 @@ ___________________________________________________*/
 }
 
 /*Mid-head*/
-.fab, .fas{
-    color:initial;
-    /*So as to make them readable. They were unreadable as color:inherit(white|)*/
+.mid-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    min-height:135px;
+    outline:1px solid black;
+    /*Instruction: Remove this outline when you start the bottom-head. Its only purpose was to show its borders */
+}
+
+#social li{
+    background-color:#333;
+    width:15px;
+    height:15px;
+    /*Assigned fixed width and height so as to give them unifrom size*/
+    border-radius:50%;
+    padding:7px;
+    /*Added padding to get the desired width and height*/
+    margin-left:5px;
+    /*There was some margin already at work so giving it 10px margin would have made it bigger*/
 }
