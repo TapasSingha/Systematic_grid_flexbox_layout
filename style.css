@@ -1,19 +1,34 @@
+/*Instruction: Organize the CSS file later*/
 *{
     padding:0;
     margin:0;
     text-align:center;
     color:#fff;
     font-family:Georgia, 'Times New Roman', Times, serif;
-    font-size:12px;
+    font-size:16px;
 }
 li{
     list-style-type:none;
     display:inline-block;
+    padding-right:8px;
+    margin-right:2px; 
+    position:relative;
+}
+li::after{
+    /*Give it a width, height and content:"". Then make it position absolute in the context of its parent (li)being position:relative. Now it should render on screen. 
+    */
+    content:"";
+    position:absolute;
+    background-color:#fff;
+    width:2px;
+    height:12px;
+    /*About the alignment, I measured the distance between each li in the design (10px), and divided it into padding-right (8px) and margin-right (2px) and gave them to the li above. Then placed the bars to the far-right by making the li::after right:0. Now the bars are almost perfectly centered between each li's. */
+    top:3px;
+    right:0;
 }
 a{
     text-decoration:none;
     display:block;
-
 }   
 
 .wrapper{
@@ -45,12 +60,6 @@ a{
 #search form *{
     border:none;
 }
-/*_________________________________________________
-Instruction: 
-    Increase the gap between the search-text and the top and bottom celing of search form
-
-Status: Completed by assigning height and using flexbox.
-___________________________________________________*/
 
 #search input[type="text"]{  
     border-radius:25px;
@@ -64,5 +73,3 @@ ___________________________________________________*/
     height:18px;
     cursor:pointer;
 }
-
-
