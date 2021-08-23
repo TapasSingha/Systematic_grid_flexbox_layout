@@ -81,8 +81,14 @@ ___________________________________________________*/
     margin-right:3px;
 }
 #search input[type="submit"]{
-    background:url(images/search.png) no-repeat;
+    background:url(/images/search.png) no-repeat;
     width:18px;
     height:18px;
     cursor:pointer;
+}
+
+/*Mid-head*/
+.fab, .fas{
+    color:initial;
+    /*So as to make them readable. They were unreadable as color:inherit(white|)*/
 }
