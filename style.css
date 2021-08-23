@@ -1,4 +1,7 @@
-/*Instruction: Organize the CSS file later*/
+/*
+Link to GitHub page: https://github.com/TapasSingha/Systematic_grid_flexbox_layout/blob/main/style.css 
+*/
+/*Link to codepen link https://codepen.io/TapasSingha/pen/jOwNxmx?editors=1100*/
 *{
     padding:0;
     margin:0;
@@ -25,6 +28,10 @@ li::after{
     /*About the alignment, I measured the distance between each li in the design (10px), and divided it into padding-right (8px) and margin-right (2px) and gave them to the li above. Then placed the bars to the far-right by making the li::after right:0. Now the bars are almost perfectly centered between each li's. */
     top:3px;
     right:0;
+}
+/*Made the last vertical bar disappear with the following code*/
+li:last-of-type::after{
+    display:none;
 }
 a{
     text-decoration:none;
@@ -60,6 +67,12 @@ a{
 #search form *{
     border:none;
 }
+/*_________________________________________________
+Instruction: 
+    Increase the gap between the search-text and the top and bottom celing of search form
+
+Status: Completed by assigning height and using flexbox.
+___________________________________________________*/
 
 #search input[type="text"]{  
     border-radius:25px;
