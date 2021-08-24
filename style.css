@@ -93,8 +93,6 @@ ___________________________________________________*/
     justify-content:space-between;
     align-items:center;
     min-height:135px;
-    outline:1px solid black;
-    /*Instruction: Remove this outline when you start the bottom-head. Its only purpose was to show its borders */
 }
 
 #social li{
@@ -107,4 +105,24 @@ ___________________________________________________*/
     /*Added padding to get the desired width and height*/
     margin-left:5px;
     /*There was some margin already at work so giving it 10px margin would have made it bigger*/
+}
+
+.bot-head{
+    min-height:2rem;
+    width:100%;
+    background-color:blue;
+    position:relative;
+}
+.bot-head:after{
+    content:"";
+    width:inherit;
+    min-height:1rem;
+    position:absolute;
+    left:0;
+    background-color:red;
+}
+.bot-head ul{
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
