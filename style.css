@@ -112,17 +112,21 @@ ___________________________________________________*/
     width:100%;
     background-color:blue;
     position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 .bot-head:after{
     content:"";
     width:inherit;
     min-height:1rem;
     position:absolute;
+    /*Without width and height it cannot be rendered as it has no content. Width, height, content, and position:absolute are necessary to display content like this.*/
     left:0;
     background-color:red;
+    align-self:flex-end;
 }
 .bot-head ul{
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    z-index:1;
+    /*Without z-index, the bottom part override the ul*/
 }
