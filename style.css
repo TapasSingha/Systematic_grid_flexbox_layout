@@ -108,9 +108,9 @@ ___________________________________________________*/
 }
 
 .bot-head{
-    min-height:2rem;
+    min-height:2.5rem; /*or 40px*/
     width:100%;
-    background-color:blue;
+    background-color:#333;
     position:relative;
     display:flex;
     align-items:center;
@@ -119,14 +119,19 @@ ___________________________________________________*/
 .bot-head:after{
     content:"";
     width:inherit;
-    min-height:1rem;
+    min-height:1.1875rem; /*or 19px*/
     position:absolute;
     /*Without width and height it cannot be rendered as it has no content. Width, height, content, and position:absolute are necessary to display content like this.*/
     left:0;
-    background-color:red;
+    background-color:#2b2b2b;
     align-self:flex-end;
 }
 .bot-head ul{
     z-index:1;
     /*Without z-index, the bottom part override the ul*/
+    display:flex;
+    gap:12px
+}
+.bot-head a:hover{
+    color:#ba2e1f;
 }
