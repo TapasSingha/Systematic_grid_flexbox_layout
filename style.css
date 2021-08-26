@@ -166,21 +166,20 @@ ___________________________________________________*/
     display:grid;
     grid-template-columns:1fr 2rem 1.3fr;
     grid-template-areas:
-    "hero-img . hero-child";
+    "hero-img . hero-text";
 }
 .hero-img{
-    outline:1px solid black;
     grid-area:hero-img;  
+    justify-self:start;
 }
-.hero-child{
-    grid-area:hero-child;
+.hero-text{
+    grid-area:hero-text;
 }
 .hero *{
     color:black;
     text-align:left;
-    outline:1px solid red;
 }
-.hero-child{
+.hero-text{
     display:grid;
     grid-template-columns:1fr;
     grid-template-rows:2fr 4fr 2fr 1fr;
@@ -196,19 +195,19 @@ ___________________________________________________*/
     justify-content:center;
     align-items:center;
 }
-.hero-child h1{
+.hero-text h1{
     font-size:86px;
     font-weight:200;
     letter-spacing: 2px;
     text-transform: uppercase;
     grid-area:h1;
 }
-.hero-child p{
+.hero-text p{
     grid-area:p;
     line-height:24px;
     color:#666;
 }
-.hero-child a{
+.hero-text a{
     grid-area:a;
     text-transform:uppercase;
 }
@@ -218,7 +217,7 @@ ___________________________________________________*/
     text-transform:capitalize;
     position:relative;
 }
-.hero-child a:after{
+.hero-text a:after{
     content:url(images/search.png);
     position:absolute;
 }
@@ -245,7 +244,6 @@ ___________________________________________________*/
 .service-child{
     padding:5px;
     background-color:#f2f2f2;
-    border: 1px dotted black;
     min-height:552px;
 }
 .service-child h2{
