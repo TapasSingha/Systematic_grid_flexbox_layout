@@ -316,5 +316,10 @@ ___________________________________________________*/
 }
 .testimony-name p{
     margin:0;
+    font-weight:600;
     /*I used so much time trying to center the text inside testimony-name using flexbox, but the p had an inherited margin so it was not centering at all*/
+}
+.testimony-name .testimonial-designation{
+    color:inherit;
+    font-weight:100;
 }
