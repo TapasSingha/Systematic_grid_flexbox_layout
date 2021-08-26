@@ -210,8 +210,12 @@ ___________________________________________________*/
 }
 .hero-child a{
     grid-area:a;
+    text-transform:uppercase;
+}
+.read-more-link{
     color:#ba2e1f;
     text-align:right;
+    text-transform:capitalize;
     position:relative;
 }
 .hero-child a:after{
@@ -233,14 +237,31 @@ ___________________________________________________*/
         text-align:center;
     }
 }
+/*================SERVICES=====================*/
 .services{
     display:flex;
     flex-wrap:wrap;
 }
 .service-child{
     padding:5px;
-    background-color:burlywood;
-    border: 1px dotted white;
+    background-color:#f2f2f2;
+    border: 1px dotted black;
+    min-height:552px;
+}
+.service-child h2{
+    color:#333;
+    padding: 3rem 0;
+}
+.service-child p{
+    color:#878787;
+    margin-top:26px;
+}
+.service-child *{
+    text-align:left;
+}
+.service-child a{
+    text-align: end;
+    margin-top:26px;
 }
 .services > *{
     flex:1 1 100%;
