@@ -267,3 +267,24 @@ ___________________________________________________*/
     flex:1 1 100%;
     flex-basis:18.75rem; /*or 300px. To be exact- 346.66px or 21.66rem*/
 }
+
+
+.service-block{
+    display:flex;
+    flex-direction:row;
+    margin-bottom:2rem;
+}
+.service-block img{
+    width:4rem;
+    height:4rem;
+}
+.service-block p{
+    margin:0 10px 5px;
+}
+.service-text{
+    display:flex;
+    flex-direction:column;
+}
+.service-name{
+    font-weight:600;
+}
