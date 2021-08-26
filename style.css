@@ -233,3 +233,16 @@ ___________________________________________________*/
         text-align:center;
     }
 }
+.services{
+    display:flex;
+    flex-wrap:wrap;
+}
+.service-child{
+    padding:5px;
+    background-color:burlywood;
+    border: 1px dotted white;
+}
+.services > *{
+    flex:1 1 100%;
+    flex-basis:18.75rem; /*or 300px. To be exact- 346.66px or 21.66rem*/
+}
