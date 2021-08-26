@@ -8,7 +8,9 @@ Link to GitHub page: https://github.com/TapasSingha/Systematic_grid_flexbox_layo
     text-align:center;
     color:#fff;
     font-family:Georgia, 'Times New Roman', Times, serif;
-    font-size:16px;
+}
+img{
+    max-width:100%;
 }
 li{
     list-style-type:none;
@@ -106,20 +108,38 @@ ___________________________________________________*/
     margin-left:5px;
     /*There was some margin already at work so giving it 10px margin would have made it bigger*/
 }
+/*=============HOVER EFFECT===========*/
+#social li.lin:hover{
+    background:#017480;
+    border-radius:50%;
+}
+#social li.twit:hover{
+    background:#41B7E5;
+}
+#social li.gplus:hover{
+    background:#D64134;
+}
+#social li.pint:hover{
+    background:#DE2A32;
+}
+#social li.rss:hover{
+    background:#EE802F;
+}
 
 .bot-head{
-    min-height:2.5rem; /*or 40px*/
+    min-height:2.5rem; /*2.5rem or 40px*/
     width:100%;
     background-color:#333;
     position:relative;
     display:flex;
     align-items:center;
     justify-content:center;
+    flex-wrap:wrap;
 }
 .bot-head:after{
     content:"";
     width:inherit;
-    min-height:1.1875rem; /*or 19px*/
+    min-height:50%; /*1.1875rem or 19px*/
     position:absolute;
     /*Without width and height it cannot be rendered as it has no content. Width, height, content, and position:absolute are necessary to display content like this.*/
     left:0;
@@ -129,9 +149,87 @@ ___________________________________________________*/
 .bot-head ul{
     z-index:1;
     /*Without z-index, the bottom part override the ul*/
-    display:flex;
     gap:12px
 }
+/*.bot-head ul{
+    z-index:1;
+    display:grid;
+    grid-template-columns: repeat(8, 1fr); comment-How do I make the grid responsive?
+    place-items:center;    
+    column-gap:12px
+}*/
 .bot-head a:hover{
     color:#ba2e1f;
+}
+/*==============HERO SECTION================*/
+.hero{
+    display:grid;
+    grid-template-columns:1fr 2rem 1.3fr;
+    grid-template-areas:
+    "hero-img . hero-child";
+}
+.hero-img{
+    outline:1px solid black;
+    grid-area:hero-img;  
+}
+.hero-child{
+    grid-area:hero-child;
+}
+.hero *{
+    color:black;
+    text-align:left;
+    outline:1px solid red;
+}
+.hero-child{
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows:2fr 4fr 2fr 1fr;
+    grid-template-areas:
+    "."
+    "h1"
+    "p"
+    "a";
+}
+.hero-img{
+    text-align:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.hero-child h1{
+    font-size:86px;
+    font-weight:200;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    grid-area:h1;
+}
+.hero-child p{
+    grid-area:p;
+    line-height:24px;
+    color:#666;
+}
+.hero-child a{
+    grid-area:a;
+    color:#ba2e1f;
+    text-align:right;
+    position:relative;
+}
+.hero-child a:after{
+    content:url(images/search.png);
+    position:absolute;
+}
+@media screen and (max-width:800px){
+    .hero{
+        display:grid;
+        grid-template-columns:1fr;
+        grid-template-rows: repeat(2, 1rem 1fr);
+        grid-template-areas:
+        "."
+        "hero-img"
+        "."
+        "hero-child";
+    }
+    .hero p, .hero h1{
+        text-align:center;
+    }
 }
