@@ -323,3 +323,44 @@ ___________________________________________________*/
     color:inherit;
     font-weight:100;
 }
+
+
+.bottom *{
+    color:black;
+}
+.bottom{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;   
+}
+.bottom > *{
+    flex:1 1 100%;
+    flex-basis:15.625rem; /*15.625rem or 250px, 260px or 16.5rem;*/
+
+    background-color:biege;
+    border:1px solid orange;
+}
+.bottom *{
+    text-align:left;
+
+}
+.tweets > *{
+    margin: 0 0.5rem;
+}
+.tweets h3{
+    font-size:1rem;
+    text-transform:uppercase;
+    color:#666;
+    margin-top:1.2rem;
+    margin-bottom:2rem;
+    text-align:left;
+}
+.tweet-block p:first-of-type {
+    margin-bottom:0.5rem;
+}
+.user-name{
+    color:#ba2e1f;
+}
+.tweet-block{
+    margin-bottom:1.5rem;
+}
