@@ -190,6 +190,7 @@ ___________________________________________________*/
     "h1"
     "p"
     "a";
+    position:relative;
 }
 .hero-img{
     text-align:center;
@@ -215,9 +216,11 @@ ___________________________________________________*/
 }
 .read-more-link{
     color:#ba2e1f;
-    text-align:right;
     text-transform:capitalize;
-    position:relative;
+    /*Made position absolute so that they do not break. Find the version without position absolute here https://github.com/TapasSingha/Systematic_grid_flexbox_layout/tree/4b2954f5bd00b08800e417e0bba041b8d8213c0c*/
+    position:absolute;
+    bottom:0;
+    right:0;
 }
 .hero-text a:after{
     content:url(images/search.png);
@@ -247,6 +250,7 @@ ___________________________________________________*/
     padding:5px;
     background-color:#f2f2f2;
     min-height:552px;
+    position:relative;
 }
 .service-child h2{
     color:#333;
@@ -261,13 +265,13 @@ ___________________________________________________*/
 }
 .service-child a{
     text-align: end;
-    margin-top:26px;
+    /*margin-top:26px;
+    It is causing override on link in the third service*/
 }
 .services > *{
     flex:1 1 100%;
     flex-basis:18.75rem; /*or 300px. To be exact- 346.66px or 21.66rem*/
 }
-
 
 .service-block{
     display:flex;
@@ -286,5 +290,31 @@ ___________________________________________________*/
     flex-direction:column;
 }
 .service-name{
-    font-weight:600;
+    font-weight:600; 
+}
+
+/* What is its function?
+.curve-svg{
+    background-color: inherit;
+    position: absolute;
+    left: 680px;
+    top: 811px;
+    width: 53px;
+    height: 44px;
+    z-index: 64;
+  }*/
+
+.testimony-head{
+    display:flex;
+    flex-direction:row;
+}
+
+.testimony-name{
+    display:flex;
+    justify-items:center;
+    align-items:center;
+}
+.testimony-name p{
+    margin:0;
+    /*I used so much time trying to center the text inside testimony-name using flexbox, but the p had an inherited margin so it was not centering at all*/
 }
