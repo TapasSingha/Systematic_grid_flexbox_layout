@@ -249,8 +249,11 @@ ___________________________________________________*/
 .service-child{
     padding:5px;
     background-color:#f2f2f2;
-    min-height:552px;
     position:relative;
+    display:flex;
+    flex-direction:column;
+    min-height:580px;
+    color:blue;
 }
 .service-child h2{
     color:#333;
@@ -278,6 +281,7 @@ ___________________________________________________*/
     flex-direction:row;
     margin-bottom:2rem;
 }
+
 .service-block img{
     width:4rem;
     height:4rem;
@@ -342,12 +346,15 @@ ___________________________________________________*/
 }
 .bottom *{
     text-align:left;
-
 }
-.tweets > *{
+.bottom-child{
+    border-top:1px solid #ba2e1f;
+    margin-top:50px;
+}
+.bottom-child > *{
     margin: 0 0.5rem;
 }
-.tweets h3{
+.bottom-child h3{
     font-size:1rem;
     text-transform:uppercase;
     color:#666;
@@ -363,4 +370,70 @@ ___________________________________________________*/
 }
 .tweet-block{
     margin-bottom:1.5rem;
+}
+
+.quick-link ul{
+    /*https://www.456bereastreet.com/archive/201105/styling_ordered_list_numbers/*/
+    margin-left:0; 
+	padding-left:0;
+}
+.quick-link ul > li{
+    position:relative;
+	margin:0 0 6px 1em; /* Necessary | Give each list item a left margin to make room for the numbers */
+    padding:4px 8px;
+    color:#666;
+	border-bottom:1px solid #d4d4d4;
+
+    display:block; /*Otherwise they were breaking and flexing*/
+}
+.quick-link ul > li:before{
+    content:"»";
+    color:#ba2e1f; /*It looks better than #666 which is in the design*/
+    position:absolute;
+    left:0;
+
+	position:absolute;
+	top:-2px;
+	left:-1rem; /*Necessary*/
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;  
+	width:1em;
+    
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+    
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:left;
+}
+
+/*FIX THESE PROBLEMS.
+MAKE THE LINKS IN FIRST AND SECOND SERVICE-SECTION ALIGNED */
+
+.p-a-link{
+    /*background-color:red;*/    
+    height:64px;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:flex-end;
+    
+}
+.p-a-link a{
+    /*background-color:blue;*/
+    position:unset;
+}
+
+.service-block:last-of-type{
+    margin:0;
+}
+/*.service-child:nth-of-type(1) .read-more-link, .service-child:nth-of-type(2) .read-more-link{    
+}*/
+.p-a-link{
+    position:absolute;
+    bottom:0;
+    right:0;
 }
