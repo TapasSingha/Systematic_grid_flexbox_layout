@@ -2,11 +2,19 @@
 Link to GitHub page: https://github.com/TapasSingha/Systematic_grid_flexbox_layout/blob/main/style.css 
 */
 /*Link to codepen link https://codepen.io/TapasSingha/pen/jOwNxmx?editors=1100*/
+:root{
+    --main-bg-color:#fff;
+    --accent-color:#ba2e1f;
+
+    --base-font-size:16px;
+    --main-text-color:#000;
+    --text-color-white:#fff;
+    --text-color-grey:#878787;
+}
 *{
     padding:0;
     margin:0;
-    text-align:center;
-    color:#fff;
+    color:var(--text-color-white);
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
 img{
@@ -46,7 +54,7 @@ a{
     margin-left:auto;
 }
 .top-head{
-    background-color:#ba2e1f;
+    background-color:var(--accent-color);
     min-height:51px;
     display:flex;
     justify-content:space-between;
@@ -58,7 +66,7 @@ a{
     display:flex;
     align-items:center;
     justify-content:center;
-    background-color:#fff;
+    background-color:var(--main-bg-color);
     border-radius:25px;
 }
 #search form{
@@ -248,7 +256,7 @@ ___________________________________________________*/
 }
 .service-child{
     padding:5px;
-    background-color:#f2f2f2;
+    background-color:var(--main-bg-color);
     position:relative;
     display:flex;
     flex-direction:column;
@@ -348,7 +356,7 @@ ___________________________________________________*/
     text-align:left;
 }
 .bottom-child{
-    border-top:1px solid #ba2e1f;
+    border-top:1px solid var(--accent-color);
     margin-top:50px;
 }
 .bottom-child > *{
@@ -366,7 +374,7 @@ ___________________________________________________*/
     margin-bottom:0.5rem;
 }
 .user-name{
-    color:#ba2e1f;
+    color:var(--accent-color);
 }
 .tweet-block{
     margin-bottom:1.5rem;
@@ -388,7 +396,7 @@ ___________________________________________________*/
 }
 .quick-link ul > li:before{
     content:"»";
-    color:#ba2e1f; /*It looks better than #666 which is in the design*/
+    color:var(--accent-color); /*It looks better than #666 which is in the design*/
     position:absolute;
     left:0;
 
