@@ -6,9 +6,12 @@ Link to GitHub page: https://github.com/TapasSingha/Systematic_grid_flexbox_layo
     --main-bg-color:#fff;
     --accent-color:#ba2e1f;
 
+    --color-light-grey:#f2f2f2;
     --base-font-size:16px;
     --main-text-color:#000;
     --text-color-white:#fff;
+    --color-grey:#9f9f9f;
+    --text-color-dark-grey:#666;
     --text-color-grey:#878787;
 }
 *{
@@ -32,7 +35,7 @@ li{
     */
     content:"";
     position:absolute;
-    background-color:#fff;
+    background-color:var(--main-bg-color);
     width:2px;
     height:12px;
     /*About the alignment, I measured the distance between each li in the design (10px), and divided it into padding-right (8px) and margin-right (2px) and gave them to the li above. Then placed the bars to the far-right by making the li::after right:0. Now the bars are almost perfectly centered between each li's. */
@@ -169,7 +172,7 @@ ___________________________________________________*/
     column-gap:12px
 }*/
 .bot-head a:hover{
-    color:#ba2e1f;
+    color:var(--accent-color);
 }
 /*==============HERO SECTION================*/
 .hero{
@@ -223,15 +226,18 @@ ___________________________________________________*/
     text-transform:uppercase;
 }
 .read-more-link{
-    color:#ba2e1f;
+    color:var(--accent-color);
     text-transform:capitalize;
     /*Made position absolute so that they do not break. Find the version without position absolute here https://github.com/TapasSingha/Systematic_grid_flexbox_layout/tree/4b2954f5bd00b08800e417e0bba041b8d8213c0c*/
     position:absolute;
     bottom:0;
     right:0;
 }
+.hero .read-more-link{
+    margin-right:1rem
+}
 .hero-text a:after{
-    content:url(images/search.png);
+    content:"»";
     position:absolute;
 }
 @media screen and (max-width:800px){
@@ -253,6 +259,7 @@ ___________________________________________________*/
 .services{
     display:flex;
     flex-wrap:wrap;
+   
 }
 .service-child{
     padding:5px;
@@ -261,6 +268,7 @@ ___________________________________________________*/
     display:flex;
     flex-direction:column;
     min-height:580px;
+    background-color:#f2f2f2;
     color:blue;
 }
 .service-child h2{
@@ -335,7 +343,12 @@ ___________________________________________________*/
     color:inherit;
     font-weight:100;
 }
-
+.testimony-block{
+    margin-bottom:1.4rem;
+}
+.testimony-block:last-of-type{
+    margin-bottom:initial;
+}
 
 .bottom *{
     color:black;
@@ -347,17 +360,14 @@ ___________________________________________________*/
 }
 .bottom > *{
     flex:1 1 100%;
-    flex-basis:15.625rem; /*15.625rem or 250px, 260px or 16.5rem;*/
-
-    background-color:biege;
-    border:1px solid orange;
+    flex-basis:14.3rem; /*15.625rem or 250px, 260px or 16.5rem;*/
 }
 .bottom *{
     text-align:left;
 }
 .bottom-child{
-    border-top:1px solid var(--accent-color);
-    margin-top:50px;
+    border-top:1px solid #666;
+    margin-top:3.1rem;
 }
 .bottom-child > *{
     margin: 0 0.5rem;
@@ -443,5 +453,87 @@ MAKE THE LINKS IN FIRST AND SECOND SERVICE-SECTION ALIGNED */
 .p-a-link{
     position:absolute;
     bottom:0;
-    right:0;
+    right:1em;
+}
+
+/*30th August 2021*/
+.bottom *{
+    color:var(--text-color-dark-grey);
+}
+.bottom-child{
+    margin-bottom:3rem;
+    margin-right:1.3rem;
+}
+.bottom-child:last-of-type{
+    margin-right:none;
+}
+.bottom-child h3{
+    font-size:1.03rem;
+    letter-spacing: 0.06rem;
+    font-weight:500;
+}
+.post-title{
+    font-weight:900;
+    font-size:1.16rem;
+}
+.post-author-details{
+    font-size:0.83rem;
+}
+.post{
+    margin-bottom:1rem;
+}
+.post:last-of-type{
+    margin-bottom:initial;
+}
+.accent-color{
+    color:var(--accent-color);
+}
+.post-text{
+    margin-top:1.3rem;
+    margin-bottom:1.2rem;
+}
+.read-more-link{
+    color:var(--accent-color);
+}
+.read-more-link:after{
+    content:"»";
+    color:var(--accent-color); /*It looks better than #666 which is in the design*/
+    position:absolute;
+}
+.contact-form input{
+    background-color:var(--color-light-grey);
+    border:none;
+    min-width:95%;
+    padding:0.5em;
+    margin-bottom:1rem;
+    border-radius:0.2em;
+}
+textarea{
+    background-color:var(--color-light-grey);
+    border:none;
+    resize:none; /*To remove the resize handle*/
+    outline:none; /*To remove the blue glow*/
+    min-width:95%;
+    min-height:10rem;
+    margin-bottom:1rem;
+    padding:5px;
+    border-radius:0.2em;
+}
+input[type="submit"]{
+    min-width:initial;
+    padding:0.5em 1em;
+    color:var(--accent-color);
+    text-transform:uppercase;
+    cursor:pointer;
+}
+
+footer *{
+    color:var(--color-grey);
+}
+footer{
+    background-color:var(--color-light-grey);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    min-height:4rem;
 }
